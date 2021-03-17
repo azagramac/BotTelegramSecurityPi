@@ -1,5 +1,7 @@
 ## Sending notifications with a Telegram bot usage RaspberryPi and sensor PIR
 
+![PIR Sensor](https://github.com/AzagraMac/BotTelegramSecurityPi/blob/dev/res/pir_sensor.png)
+
 ### Requeriments
 - Raspberry Pi
 - Pi Camera or Pi NoIR
