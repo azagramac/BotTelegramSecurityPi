@@ -36,6 +36,7 @@ Edit the config.py file, and add your tokens obtained in https://t.me/BotFather 
     sudo chmod 644 /lib/systemd/system/bot.service
     sudo systemctl daemon-reload
     sudo systemctl enable bot.service
+    sudo systemctl start bot.service
     sudo systemctl status bot.service
 
 ### Run manual
