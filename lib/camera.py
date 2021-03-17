@@ -45,7 +45,7 @@ class Camera:
         self.camera.close()
 
     def purge_records(self):
-        command = "cd " + self.registration_folder + " && rm -rf *.h264 *.mp4 .jpeg"
+        command = "cd " + self.registration_folder + " && rm -rf *.h264 *.mp4"
         try:
             subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
         except subprocess.CalledProcessError as err:
