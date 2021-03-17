@@ -16,6 +16,9 @@
 ### Settings to RaspberryPi
     sudo raspi-config nonint do_camera 0
 
+### Check /boot/config.txt, must have a minimum of 128Mb in the gpu_mem parameter
+    gpu_mem=128
+
 ### Edit config.py
 Edit the config.py file, and add your tokens obtained in https://t.me/BotFather and https://t.me/myidbot
 
