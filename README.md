@@ -1,5 +1,9 @@
 ## Sending notifications with a Telegram bot usage RaspberryPi and sensor PIR
 
+### Requeriments
+- Raspberry Pi
+- Pi Camera or Pi NoIR
+- PIR Motion Sensor Module HCSR501
 
 ### Install
 
