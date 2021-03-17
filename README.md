@@ -23,8 +23,17 @@ Edit the config.py file, and add your tokens obtained in https://t.me/BotFather 
 
     TOKEN_ID = 'YOUR_TOKEN_BOT'
     CHAT_ID = 'YOUT_TOKEN_CHAT_ID'
+### Edit bot.service, change path script excution.
+
+    [Service]
+    Type=idle
+    ExecStart=/usr/bin/python3 /home/pi/git/BotTelegramSecurityPi/app.py
 
 ### Run
 
+    sudo chmod 644 /lib/systemd/system/bot.service
+    sudo systemctl daemon-reload
+    sudo systemctl enable bot.service
+    sudo systemctl status bot.service
     chmod a+x app.py lib/*.py
     ./app.py

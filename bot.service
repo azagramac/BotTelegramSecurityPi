@@ -1,0 +1,10 @@
+[Unit]
+Description=Bot Telegram, camara de seguridad
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/pi/git/BotTelegramSecurityPi/app.py
+
+[Install]
+WantedBy=multi-user.target

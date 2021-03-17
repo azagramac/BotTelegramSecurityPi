@@ -1,6 +1,6 @@
 # Get your token and chat id.
-# token: @BotFather
-# chat id: @myidbot
+# token: https://t.me/BotFather
+# chat id: https://t.me/myidbot
 TOKEN_ID = 'YOUR_TOKEN_BOT'
 CHAT_ID = 'YOUT_TOKEN_CHAT_ID'
 

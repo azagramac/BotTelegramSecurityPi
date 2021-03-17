@@ -27,7 +27,7 @@ def on_photo():
 @bot.handler("/video")
 def on_video(*args):
     delay = args[0] if args else VIDEO_TIME
-    bot.send_message("Starting video recording...")
+    bot.send_message("Starting video recording" + (delay)"..."))
     time.sleep(delay)
     bot.send_message("Sending video...")
     return bot.send_video(camera.start_recording(delay), "Video")
