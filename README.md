@@ -32,6 +32,7 @@ Edit the config.py file, and add your tokens obtained in https://t.me/BotFather 
 
 ### Run automatic on boot
     chmod a+x app.py lib/*.py
+    sudo mv bot.service /lib/systemd/system/
     sudo chmod 644 /lib/systemd/system/bot.service
     sudo systemctl daemon-reload
     sudo systemctl enable bot.service
