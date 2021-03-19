@@ -6,13 +6,13 @@ import time
 import sys
 import picamera
 import telegram
-from config import TOKEN_ID, CHAT_ID, VIDEO_TIME, REGISTRATION_FOLDER
+from config import token_id, chat_id, VIDEO_TIME, REGISTRATION_FOLDER
 from lib.camera import Camera
 from lib.telebot import Telebot
 from lib.pir import MotionDetector
 
 camera = Camera(REGISTRATION_FOLDER)
-bot = Telebot(TOKEN_ID, CHAT_ID)
+bot = Telebot(token_id, chat_id)
 pir = MotionDetector()
 
 @bot.handler("/start")
@@ -28,9 +28,7 @@ def on_photo():
 def on_video(*args):
     delay = args[0] if args else VIDEO_TIME
     bot.send_message("Starting video recording...")
-    time.sleep(delay)
-    bot.send_message("Sending video...")
-    return bot.send_video(camera.start_recording(delay), "Video")
+    return bot.send_video(camera.start_recording(), "Video")
 
 @bot.handler("/clean")
 def on_clean():
@@ -48,7 +46,7 @@ def on_help():
     msg += "\t/help: show help\n"
     return bot.send_message(msg)
 
-print('I am listening ...')
+print('BotTelegram ready...')
 try:
     while True:
         if bot.is_listen and pir.movement_detected():

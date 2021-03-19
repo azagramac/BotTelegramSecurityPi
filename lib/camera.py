@@ -3,7 +3,6 @@ import time
 import os
 
 from picamera import PiCamera
-
 class Camera:
 
     def __init__(self, folder):
